@@ -1,2 +1,2 @@
 # access-manager
-Manage ssh keys
+Web app to manage SSH keys.
