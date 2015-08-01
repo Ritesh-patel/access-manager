@@ -27,6 +27,8 @@ gem 'devise'
 gem 'authority'
 gem 'rolify'
 
+gem 'tzinfo-data', platforms: [:x64_mingw,:mingw, :mswin]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
