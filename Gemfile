@@ -33,6 +33,9 @@ gem 'rolify'
 
 gem 'tzinfo-data', platforms: [:x64_mingw,:mingw, :mswin]
 
+#Active Admin : fixed infinite loop issue -> https://github.com/activeadmin/activeadmin/issues/3926
+gem 'activeadmin', github: 'activeadmin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
