@@ -1,2 +1,2 @@
-# access-manager
-Web app to manage SSH keys.
+# Access Manager
+Web app to manage SSH keys on multiple servers
