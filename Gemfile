@@ -34,6 +34,9 @@ gem 'rolify'
 #Active Admin : fixed infinite loop issue -> https://github.com/activeadmin/activeadmin/issues/3926
 gem 'activeadmin', github: 'activeadmin'
 
+# Select2 https://github.com/argerim/select2-rails
+gem 'select2-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
