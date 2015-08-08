@@ -18,6 +18,6 @@
             <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "off", placeholder: "Confirm password"  %>
       </div>
     </div>
-      <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary btn-sign-up center-block" %>
+      <%= f.button t('.sign_up', :default => ''), class: "btn btn-primary btn-sign-up center-block glyphicon glyphicon-ok" %>
     <% end %>
 <%= render "devise/shared/links" %>

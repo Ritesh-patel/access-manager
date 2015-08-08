@@ -129,7 +129,7 @@ html, body.login, .login-container, .container {
   }
 
   .input-group-btn button {
-    &.login-btn {
+    &.login-btn, &.btn-forgot-pass {
       background-color: rgba(0, 0, 0, 0);
       color: $header-bg-color;
       border-left: none;
@@ -155,8 +155,13 @@ html, body.login, .login-container, .container {
 
     }
   }
-  .btn-sign-up{
+  button.btn.btn-sign-up{
     border-radius: 4px;
+    color: $gray-light;
+    width: 100%;
+    &:hover{
+      color: #333333;
+    }
   }
 }
 .made-with-love{
