@@ -32,8 +32,16 @@
 // Components
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/button-groups";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/input-groups";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/navs";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/navbar";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/alerts";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/component-animations";
+
+// Utility classes
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/utilities";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/responsive-utilities";
+
+
 
 $container-color: #FFF;
 $header-bg-color: #FFCC29;
@@ -41,7 +49,6 @@ $container-bg-color: #333;
 $font-color: #fff;
 
 .navbar-inverse {
-  font-size: 1.5em;
   background-color: $container-bg-color;
   border-color: $container-bg-color;
   .navbar-brand {
@@ -52,12 +59,17 @@ $font-color: #fff;
     }
   }
   .navbar-nav {
-    & > li > a {
-      font-size: 1.2em;
-      text-decoration: none;
-      color: $header-bg-color;
-      &:hover {
+    & > li {
+      padding: 10px;
+      & > a {
+        text-decoration: none;
         color: $header-bg-color;
+        padding: 5px 15px;
+        &:hover {
+          color: $header-bg-color;
+          border: 1px solid $header-bg-color;
+          border-radius: 4px
+        }
       }
     }
   }
@@ -131,5 +143,16 @@ html, body.login, .login-container, .container {
       }
 
     }
+  }
+}
+.made-with-love{
+  display: block;
+  color: #666;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  i{
+    color: $header-bg-color;
   }
 }
