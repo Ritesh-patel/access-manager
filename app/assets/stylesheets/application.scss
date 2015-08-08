@@ -74,60 +74,62 @@ $font-color: #fff;
 }
 
 //Login screen
-html, body, .container {
+html, body.login, .login-container, .container {
   background-color: $container-bg-color;
   height: 100%;
 }
-
-.container {
-  display: table;
-  vertical-align: middle;
-}
-
-.vertical-center-row {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.btn.glyphicon, .input-group-addon.glyphicon {
-  position: initial;
-  background-color: $header-bg-color;
-  border-color: $header-bg-color;
-}
-
-.input-group .form-control {
-  background: transparent;
-  border-color: $header-bg-color;
-  color: $header-bg-color;
-  &.password {
-    border-right: none;
+.login-container {
+  .container {
+    height: 100%;
+    display: table;
+    vertical-align: middle;
   }
-}
 
-.input-group-btn button {
-  &.login-btn{
-    background-color: rgba(0, 0, 0, 0);
+  .vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .btn.glyphicon, .input-group-addon.glyphicon {
+    position: initial;
+    background-color: $header-bg-color;
+    border-color: $header-bg-color;
+  }
+
+  .input-group .form-control {
+    background: transparent;
+    border-color: $header-bg-color;
     color: $header-bg-color;
-    border-left: none;
-    &:hover {
-      background-color: #FFCC29;
-      color: #333;
+    &.password {
+      border-right: none;
     }
   }
-}
 
-.login-share {
-  a {
-    color: #666666;
-    text-decoration: none;
-    &:hover, &:focus {
+  .input-group-btn button {
+    &.login-btn {
+      background-color: rgba(0, 0, 0, 0);
       color: $header-bg-color;
-      text-decoration: none;
+      border-left: none;
+      &:hover {
+        background-color: #FFCC29;
+        color: #333;
+      }
     }
-    float: left;
-    &:nth-child(even){
-      float: right;
-    }
+  }
 
+  .login-share {
+    a {
+      color: #666666;
+      text-decoration: none;
+      &:hover, &:focus {
+        color: $header-bg-color;
+        text-decoration: none;
+      }
+      float: left;
+      &:nth-child(even) {
+        float: right;
+      }
+
+    }
   }
 }
