@@ -104,6 +104,9 @@ html, body.login, .login-container, .container {
       border-right: none;
     }
   }
+  .new_user .form-group .input-group{
+    width: 100%;
+  }
 
   .input-group-btn button {
     &.login-btn {
