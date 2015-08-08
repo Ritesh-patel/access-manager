@@ -91,6 +91,7 @@ html, body.login, .login-container, .container {
   height: 100%;
 }
 .login-container {
+  //margin-top: 60px;
   .container {
     height: 100%;
     display: table;
@@ -153,6 +154,9 @@ html, body.login, .login-container, .container {
       }
 
     }
+  }
+  .btn-sign-up{
+    border-radius: 4px;
   }
 }
 .made-with-love{
