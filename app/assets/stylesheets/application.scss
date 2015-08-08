@@ -10,8 +10,124 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *= require_self
- *= require_tree .
  */
 
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "settings/variables";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/normalize";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/print";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/glyphicons";
+// Core CSS
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/type";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/code";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/forms";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/button-groups";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/input-groups";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/navbar";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/alerts";
+
+$container-color: #FFF;
+$header-bg-color: #FFCC29;
+$container-bg-color: #333;
+$font-color: #fff;
+
+.navbar-inverse {
+  font-size: 1.5em;
+  background-color: $container-bg-color;
+  border-color: $container-bg-color;
+  .navbar-brand {
+    text-decoration: none;
+    color: $header-bg-color;
+    &:hover {
+      color: $header-bg-color;
+    }
+  }
+  .navbar-nav {
+    & > li > a {
+      font-size: 1.2em;
+      text-decoration: none;
+      color: $header-bg-color;
+      &:hover {
+        color: $header-bg-color;
+      }
+    }
+  }
+  .navbar-toggle {
+    border-color: #505050;
+    &:hover, &:focus {
+      background-color: #FFC000;
+      background-image: linear-gradient(180deg, #FFC000, #F0A804);
+    }
+    .icon-bar {
+      background-color: #505050;
+    }
+  }
+}
+
+//Login screen
+html, body, .container {
+  background-color: $container-bg-color;
+  height: 100%;
+}
+
+.container {
+  display: table;
+  vertical-align: middle;
+}
+
+.vertical-center-row {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.btn.glyphicon, .input-group-addon.glyphicon {
+  position: initial;
+  background-color: $header-bg-color;
+  border-color: $header-bg-color;
+}
+
+.input-group .form-control {
+  background: transparent;
+  border-color: $header-bg-color;
+  color: $header-bg-color;
+  &.password {
+    border-right: none;
+  }
+}
+
+.input-group-btn button {
+  &.login-btn{
+    background-color: rgba(0, 0, 0, 0);
+    color: $header-bg-color;
+    border-left: none;
+    &:hover {
+      background-color: #FFCC29;
+      color: #333;
+    }
+  }
+}
+
+.login-share {
+  a {
+    color: #666666;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: $header-bg-color;
+      text-decoration: none;
+    }
+    float: left;
+    &:nth-child(even){
+      float: right;
+    }
+
+  }
+}

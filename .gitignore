@@ -7,7 +7,6 @@
 # Ignore bundler config.
 /.bundle
 .idea
-/vendor
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -18,3 +17,4 @@
 !/log/.keep
 /tmp
 
+node_modules
