@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Home</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,14 +10,20 @@
 
 <%= render "layouts/component/nav" %>
 <div class="login-container">
-<% if notice %>
-    <p class="alert alert-success" role="alert"><%= notice %></p>
-<% end %>
-<% if alert %>
-    <p class="alert alert-error" role="alert"><%= alert %></p>
-<% end %>
+  <div class="container">
+    <div class="row vertical-center-row login">
+      <div class="col-lg-offset-4 col-lg-4">
+        <% if notice %>
+            <p class="alert alert-success" role="alert"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+            <p class="alert alert-danger" role="alert"><%= alert %></p>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 
-<%= yield %>
 </div>
 <%= render "layouts/component/footer" %>
 </body>

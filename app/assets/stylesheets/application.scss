@@ -34,8 +34,8 @@
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/input-groups";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/navs";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/navbar";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/alerts";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/component-animations";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/alerts";
 
 // Utility classes
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/utilities";
@@ -96,7 +96,14 @@ html, body.login, .login-container, .container {
     display: table;
     vertical-align: middle;
   }
-
+  .alert-danger{
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #EBCCD1;
+    color: #D9534F;
+    text-shadow: none;
+    border: none;
+    text-align: center;
+  }
   .vertical-center-row {
     display: table-cell;
     vertical-align: middle;
