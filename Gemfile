@@ -36,6 +36,9 @@ gem 'activeadmin', github: 'activeadmin'
 
 #Add bower for rails
 gem 'bower-rails'
+# Select2 https://github.com/argerim/select2-rails
+gem 'select2-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
