@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @group.name %>
+</p>
+
+<% if(@group.parent) %>
+    <p>
+      <strong>Group:</strong>
+      <%= link_to (@group.parent).name, group_path(@group.parent) %>
+    </p>
+<% end %>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

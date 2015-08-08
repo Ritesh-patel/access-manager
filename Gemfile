@@ -34,6 +34,11 @@ gem 'rolify'
 #Active Admin : fixed infinite loop issue -> https://github.com/activeadmin/activeadmin/issues/3926
 gem 'activeadmin', github: 'activeadmin'
 
+#Add bower for rails
+gem 'bower-rails'
+# Select2 https://github.com/argerim/select2-rails
+gem 'select2-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -52,5 +57,14 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
+group :production do
+  # gem 'pg';
+end
