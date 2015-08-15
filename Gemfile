@@ -29,7 +29,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use devise to manage login https://github.com/plataformatec/devise
 gem 'devise'
 gem 'authority'
-gem 'rolify'
 
 gem 'tzinfo-data', platforms: [:x64_mingw,:mingw, :mswin]
 
