@@ -5,10 +5,12 @@
   <%= @group.name %>
 </p>
 
-<p>
-  <strong>Group:</strong>
-  <%= link_to @group.group.name, edit_group_path(@group.group) %>
-</p>
+<% if(@group.parent) %>
+    <p>
+      <strong>Group:</strong>
+      <%= link_to (@group.parent).name, group_path(@group.parent) %>
+    </p>
+<% end %>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>

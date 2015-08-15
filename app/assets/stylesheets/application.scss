@@ -9,10 +9,169 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+ *= require_self
  */
-@import "bootstrap-sprockets";
-@import "bootstrap";
-.navbar {
-  border-radius: 0px;
+
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
+@import "settings/variables";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/normalize";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/print";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/glyphicons";
+// Core CSS
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/type";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/code";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/forms";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/button-groups";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/input-groups";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/navs";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/navbar";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/component-animations";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/alerts";
+
+// Utility classes
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/utilities";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/responsive-utilities";
+
+
+
+$container-color: #FFF;
+$header-bg-color: #FFCC29;
+$container-bg-color: #333;
+$font-color: #fff;
+
+.navbar-inverse {
+  background-color: $container-bg-color;
+  border-color: $container-bg-color;
+  .navbar-brand {
+    text-decoration: none;
+    color: $header-bg-color;
+    &:hover {
+      color: $header-bg-color;
+    }
+  }
+  .navbar-nav {
+    & > li {
+      padding: 10px;
+      & > a {
+        text-decoration: none;
+        color: $header-bg-color;
+        padding: 5px 15px;
+        &:hover {
+          color: $header-bg-color;
+          border: 1px solid $header-bg-color;
+          border-radius: 4px
+        }
+      }
+    }
+  }
+  .navbar-toggle {
+    border-color: #505050;
+    &:hover, &:focus {
+      background-color: #FFC000;
+      background-image: linear-gradient(180deg, #FFC000, #F0A804);
+    }
+    .icon-bar {
+      background-color: #505050;
+    }
+  }
+}
+
+//Login screen
+html, body.login, .login-container, .container {
+  background-color: $container-bg-color;
+  height: 100%;
+}
+.login-container {
+  //margin-top: 60px;
+  .container {
+    height: 100%;
+    display: table;
+    vertical-align: middle;
+  }
+  .alert-danger{
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #EBCCD1;
+    color: #D9534F;
+    text-shadow: none;
+    border: none;
+    text-align: center;
+  }
+  .vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  //Login screen
+  .btn.glyphicon, .input-group-addon.glyphicon {
+    position: initial;
+    background-color: $header-bg-color;
+    border-color: $header-bg-color;
+  }
+
+  .input-group .form-control {
+    background: transparent;
+    border-color: $header-bg-color;
+    color: $header-bg-color;
+    &.password {
+      border-right: none;
+    }
+  }
+  .new_user .form-group .input-group{
+    width: 100%;
+  }
+
+  .input-group-btn button {
+    &.login-btn, &.btn-forgot-pass {
+      background-color: rgba(0, 0, 0, 0);
+      color: $header-bg-color;
+      border-left: none;
+      &:hover {
+        background-color: #FFCC29;
+        color: #333;
+      }
+    }
+  }
+
+  .login-share {
+    a {
+      color: #666666;
+      text-decoration: none;
+      &:hover, &:focus {
+        color: $header-bg-color;
+        text-decoration: none;
+      }
+      float: left;
+      &:nth-child(even) {
+        float: right;
+      }
+
+    }
+  }
+  button.btn.btn-sign-up{
+    border-radius: 4px;
+    color: $gray-light;
+    width: 100%;
+    &:hover{
+      color: #333333;
+    }
+  }
+}
+.made-with-love{
+  display: block;
+  color: #666;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  i{
+    color: $header-bg-color;
+  }
 }
