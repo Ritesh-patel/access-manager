@@ -28,8 +28,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Use devise to manage login https://github.com/plataformatec/devise
 gem 'devise'
+# https://github.com/nathanl/authority
 gem 'authority'
-gem 'rolify'
 
 gem 'tzinfo-data', platforms: [:x64_mingw,:mingw, :mswin]
 
